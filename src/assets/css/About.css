@@ -12,10 +12,28 @@
   margin-bottom: 2rem;
 }
 
+.inline-logo {
+  height: 1em; /* mengikuti ukuran teks heading */
+  vertical-align: middle; /* biar sejajar dengan teks */
+  margin-left: 0.5rem; /* kasih jarak dari teks sebelumnya */
+}
+
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+  }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr; /* 1 kolom di HP */
+  }
 }
 
 .feature-card {
@@ -40,6 +58,6 @@
 
 .feature-card p {
   font-size: 0.95rem;
-  color: #444;
+  color: #365396;
   line-height: 1.5;
 }

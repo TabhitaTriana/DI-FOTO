@@ -1,0 +1,100 @@
+.Contact-page {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.Contact-page h1 {
+  color: #1864ff;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight:800;
+}
+
+.Contact-page p {
+  font-size: 1rem;
+  color: #365396;
+  margin: 0.25rem auto;
+  max-width: 600px;
+}
+
+.Contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.Faq-grid,
+.Message-grid {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.Faq-grid h2,
+.Message-grid h2 {
+  color: #1864ff;
+  margin-bottom: 1rem;
+}
+
+.Faq-grid h3 {
+  font-size: 1rem;
+  color: #365396;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.Faq-grid p {
+  font-size: 0.95rem;
+  color: #365396;
+  line-height: 1.5;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #365396;
+}
+
+form input,
+form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: white;
+  color: #365396;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  background-color: #facc15; /* Kuning */
+  color: white;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #eab308;
+}

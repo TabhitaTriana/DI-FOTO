@@ -1,13 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-import './index.css'
-import Home from './page/Home.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App.jsx'; // pastikan kamu render App, bukan Home
+import './index.css';
+import { App as AntdApp } from 'antd'; 
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
     <BrowserRouter>
-    <Home />
+      <App />
     </BrowserRouter>
-  </StrictMode>,
-)
+  </React.StrictMode>,
+);

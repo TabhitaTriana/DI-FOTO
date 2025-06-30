@@ -5,6 +5,7 @@ import IconFilter from '../assets/img/IconFilter.png';
 import IconFree from '../assets/img/IconFree.png';
 import IconGrid from '../assets/img/IconGrid.png';
 import IconShare from '../assets/img/IconShare.png';
+import logo from '../assets/img/LogoDifoto.png'
 
 const features =[
 { icon: IconCamera, title: 'Instant Capture', desc: 'Take photos instantly with your webcam. No setup required.' },
@@ -24,7 +25,7 @@ export default function About(){
             <div className="features-grid">
                 {features.map(({icon, title, desc}) => (
                     <div className='feature-card' key={title}>
-                        <img src="{icon}" alt="{title}" className='feature-icon' />
+                        <img src={icon} alt={title} className='feature-icon' />
                         <h3>{title}</h3>
                         <p>{desc}</p>
                     </div>

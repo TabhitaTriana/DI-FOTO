@@ -13,7 +13,7 @@ return(
         <nav className='nav-links'>
               <Link to="/Home">home</Link>
               <Link to="/About">about</Link>
-              <Link to="/">contact</Link>
+              <Link to="/Contact">contact</Link>
         </nav>
     </header>
     </>
