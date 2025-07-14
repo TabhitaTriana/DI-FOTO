@@ -13,11 +13,11 @@ export default function Contact(){
                 <div className='Faq-grid'>
                     <h2>Frequently Asked Questions</h2>
                     <h3>How do i Download my photos?</h3>
-                    <p>After taking your photos and applying filters, 
+                  <p>After taking your photos and applying filters, 
                     simply click the download button to save your photostrip</p>
                     <h3>What browsers are suported?</h3>
                     <p>
-                        <img src={logo} alt="DI FOTO" className="inline-logo"/> works best on modern
+                             works best on modern
                         browsers like Chrome, Firefox, Safari, and Edge with webcam access.
                         </p>
                     <h3>Is my data stored?</h3>

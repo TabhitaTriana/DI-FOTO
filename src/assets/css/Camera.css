@@ -117,6 +117,7 @@
   gap: 1rem;
 }
 
+
 @media (min-width: 768px) {
   .camera-wrapper {
     grid-template-columns: 1fr 1fr;

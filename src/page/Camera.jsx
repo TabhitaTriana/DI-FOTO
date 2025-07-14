@@ -1,13 +1,17 @@
 import React, { useRef, useState, useEffect } from 'react';
 import '../assets/css/Camera.css';
+import '../page/PhotostripTemp';
 import IconCamera from '../assets/img/IconCamera.png';
+import template1 from '../assets/img/photostrip2.png'
+import template2 from '../assets/img/photostrip3.png'
+import template3 from '../assets/img/photostrip4.png'
 
 export default function Camera() {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const [capturedImage, setCapturedImage] = useState(null);
 
-  // ✅ Start kamera otomatis saat <video> sudah tersedia
+ 
   useEffect(() => {
     const startCamera = async () => {
       try {
@@ -38,6 +42,19 @@ export default function Camera() {
     const imageData = canvas.toDataURL('image/png');
     setCapturedImage(imageData);
   };
+
+  const [selectedTemplate, setSelectedTemplate] = useState("template1");
+
+
+const templates = import.meta.glob('../assets/img/*.png', {
+  eager: true,
+  import: 'default',
+});
+
+const selectedTemplateSrc = templates[`../assets/img/${selectedTemplate}.png`];
+
+console.log("Selected:", selectedTemplate);
+console.log("Template src:", selectedTemplateSrc);
 
   return (
     <div className="cam-wrapper">
@@ -71,12 +88,20 @@ export default function Camera() {
       <div className="cam-right">
         <h2>Your Photostrips</h2>
         <label htmlFor="template-select">Template Layout</label>
-        <select id="template-select" disabled>
-          <option>Choose a template</option>
+
+        <select id="template-select" value={selectedTemplate} onChange={(e) => setSelectedTemplate(e.target.value)}>
+          <option value="template1">Strip 1</option>
+          <option value="template2">Strip 2</option>
+          <option value="template3">Strip 3</option>
         </select>
 
+
         <div className="template-scroll">
-          {/* Kosong dulu */}
+            {selectedTemplateSrc ? (
+                <img src={selectedTemplateSrc} alt="Template Terpilih" style={{ width: '100%' }} />
+              ) : (
+                <p>No template selected</p>
+              )}
         </div>
       </div>
     </div>
